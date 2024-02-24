@@ -1,8 +1,8 @@
 use super::{IntegerChip, Range};
 use crate::{AssignedInteger, PrimeField};
-use halo2::plonk::Error;
+use halo2_proofs::plonk::Error;
 use maingate::{
-    halo2, AssignedValue, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term,
+    halo2_proofs, AssignedValue, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term,
 };
 
 impl<W: PrimeField, N: PrimeField, const NUMBER_OF_LIMBS: usize, const BIT_LEN_LIMB: usize>

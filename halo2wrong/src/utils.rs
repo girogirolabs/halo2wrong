@@ -1,6 +1,6 @@
 use crate::{
     curves::ff::{FromUniformBytes, PrimeField},
-    halo2::{
+    halo2_proofs::{
         circuit::Value,
         dev::MockProver,
         plonk::{
@@ -280,7 +280,7 @@ fn test_bit_decomposition() {
 
 #[test]
 fn test_dimension_measurement() {
-    use halo2::{
+    use halo2_proofs::{
         circuit::{floor_planner::V1, Layouter, Value},
         plonk::{Advice, Circuit, Column, ConstraintSystem, Error, Fixed, Instance},
     };
@@ -358,7 +358,7 @@ fn test_dimension_measurement() {
         }
     }
 
-    let circuit = TestCircuit::<halo2::halo2curves::bn256::Fr>::default();
+    let circuit = TestCircuit::<halo2_proofs::halo2curves::bn256::Fr>::default();
     assert_eq!(
         DimensionMeasurement::measure(&circuit).unwrap(),
         Dimension {

@@ -1,7 +1,7 @@
 use crate::NUMBER_OF_LOOKUP_LIMBS;
-use halo2::circuit::Value;
-use maingate::halo2::halo2curves::ff::PrimeField;
-use maingate::{big_to_fe, compose, decompose_big, fe_to_big, halo2, modulus};
+use halo2_proofs::circuit::Value;
+use maingate::halo2_proofs::halo2curves::ff::PrimeField;
+use maingate::{big_to_fe, compose, decompose_big, fe_to_big, halo2_proofs, modulus};
 use num_bigint::BigUint as big_uint;
 use num_integer::Integer as _;
 use num_traits::{Num, One, Zero};

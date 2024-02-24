@@ -1,16 +1,16 @@
 use super::main_gate::{MainGate, MainGateConfig};
-use crate::halo2::circuit::Chip;
-use crate::halo2::circuit::Layouter;
-use crate::halo2::circuit::Value;
-use crate::halo2::halo2curves::ff::PrimeField;
-use crate::halo2::plonk::{ConstraintSystem, Error, Expression};
-use crate::halo2::plonk::{Selector, TableColumn};
-use crate::halo2::poly::Rotation;
+use crate::halo2_proofs::circuit::Chip;
+use crate::halo2_proofs::circuit::Layouter;
+use crate::halo2_proofs::circuit::Value;
+use crate::halo2_proofs::halo2curves::ff::PrimeField;
+use crate::halo2_proofs::plonk::{ConstraintSystem, Error, Expression};
+use crate::halo2_proofs::plonk::{Selector, TableColumn};
+use crate::halo2_proofs::poly::Rotation;
 use crate::instructions::{MainGateInstructions, Term};
 use crate::AssignedValue;
-use halo2wrong::halo2::plonk::Advice;
-use halo2wrong::halo2::plonk::Column;
-use halo2wrong::halo2::plonk::Fixed;
+use halo2wrong::halo2_proofs::plonk::Advice;
+use halo2wrong::halo2_proofs::plonk::Column;
+use halo2wrong::halo2_proofs::plonk::Fixed;
 use halo2wrong::utils::decompose;
 use halo2wrong::RegionCtx;
 use num_integer::Integer;
@@ -384,15 +384,15 @@ impl<F: PrimeField> RangeChip<F> {
 #[cfg(test)]
 mod tests {
 
-    use halo2wrong::halo2::arithmetic::Field;
-    use halo2wrong::halo2::circuit::Value;
+    use halo2wrong::halo2_proofs::arithmetic::Field;
+    use halo2wrong::halo2_proofs::circuit::Value;
     use halo2wrong::RegionCtx;
 
     use super::{RangeChip, RangeConfig, RangeInstructions};
     use crate::curves::{ff::PrimeField, pasta::Fp};
-    use crate::halo2::circuit::{Layouter, SimpleFloorPlanner};
-    use crate::halo2::dev::MockProver;
-    use crate::halo2::plonk::{Circuit, ConstraintSystem, Error};
+    use crate::halo2_proofs::circuit::{Layouter, SimpleFloorPlanner};
+    use crate::halo2_proofs::dev::MockProver;
+    use crate::halo2_proofs::plonk::{Circuit, ConstraintSystem, Error};
     use crate::main_gate::MainGate;
     use crate::{MainGateInstructions, Term};
 

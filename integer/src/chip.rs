@@ -3,11 +3,11 @@ use std::rc::Rc;
 use super::{AssignedInteger, AssignedLimb, UnassignedInteger};
 use crate::instructions::{IntegerInstructions, Range};
 use crate::rns::{Common, Integer, Rns};
-use halo2::halo2curves::ff::PrimeField;
-use halo2::plonk::Error;
-use maingate::halo2::circuit::Value;
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
+use maingate::halo2_proofs::circuit::Value;
 use maingate::{
-    halo2, AssignedCondition, AssignedValue, CombinationOptionCommon, MainGateInstructions,
+    halo2_proofs, AssignedCondition, AssignedValue, CombinationOptionCommon, MainGateInstructions,
     RangeInstructions, RegionCtx, Term,
 };
 use maingate::{MainGate, MainGateConfig};
@@ -595,11 +595,11 @@ mod tests {
     use super::{IntegerChip, IntegerConfig, IntegerInstructions, Range};
     use crate::rns::{Common, Integer, Rns};
     use crate::{PrimeField, UnassignedInteger};
-    use halo2::circuit::{Layouter, SimpleFloorPlanner, Value};
-    use halo2::plonk::{Circuit, ConstraintSystem, Error};
+    use halo2_proofs::circuit::{Layouter, SimpleFloorPlanner, Value};
+    use halo2_proofs::plonk::{Circuit, ConstraintSystem, Error};
     use maingate::mock_prover_verify;
     use maingate::{
-        big_to_fe, decompose_big, fe_to_big, halo2, AssignedCondition, MainGate, MainGateConfig,
+        big_to_fe, decompose_big, fe_to_big, halo2_proofs, AssignedCondition, MainGate, MainGateConfig,
         MainGateInstructions, RangeChip, RangeConfig, RangeInstructions, RegionCtx,
     };
     use num_bigint::{BigUint as big_uint, RandBigInt};

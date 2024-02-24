@@ -1,7 +1,7 @@
 use super::IntegerChip;
 use crate::{AssignedInteger, PrimeField};
-use halo2::plonk::Error;
-use maingate::{halo2, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term};
+use halo2_proofs::plonk::Error;
+use maingate::{halo2_proofs, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term};
 use num_bigint::BigUint as big_uint;
 use std::convert::TryInto;
 

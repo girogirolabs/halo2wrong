@@ -8,13 +8,13 @@
 //! public_input +
 //! q_constant = 0
 
-use crate::halo2::circuit::{Chip, Layouter};
-use crate::halo2::halo2curves::ff::PrimeField;
-use crate::halo2::plonk::{Advice, Column, ConstraintSystem, Error, Fixed, Instance};
-use crate::halo2::poly::Rotation;
+use crate::halo2_proofs::circuit::{Chip, Layouter};
+use crate::halo2_proofs::halo2curves::ff::PrimeField;
+use crate::halo2_proofs::plonk::{Advice, Column, ConstraintSystem, Error, Fixed, Instance};
+use crate::halo2_proofs::poly::Rotation;
 use crate::instructions::{CombinationOptionCommon, MainGateInstructions, Term};
 use crate::{AssignedCondition, AssignedValue};
-use halo2wrong::halo2::circuit::Value;
+use halo2wrong::halo2_proofs::circuit::Value;
 use halo2wrong::RegionCtx;
 use std::{iter, marker::PhantomData};
 
@@ -527,9 +527,9 @@ mod tests {
 
     use super::{MainGate, MainGateConfig, Term};
     use crate::curves::{ff::PrimeField, pasta::Fp};
-    use crate::halo2::circuit::{Layouter, SimpleFloorPlanner, Value};
-    use crate::halo2::dev::MockProver;
-    use crate::halo2::plonk::{Circuit, ConstraintSystem, Error};
+    use crate::halo2_proofs::circuit::{Layouter, SimpleFloorPlanner, Value};
+    use crate::halo2_proofs::dev::MockProver;
+    use crate::halo2_proofs::plonk::{Circuit, ConstraintSystem, Error};
     use crate::main_gate::{CombinationOptionCommon, MainGateInstructions};
     use crate::AssignedCondition;
     use halo2wrong::utils::{big_to_fe, decompose};

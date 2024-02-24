@@ -1,12 +1,12 @@
 use super::{make_mul_aux, AssignedPoint, EccConfig, MulAux, Point};
-use crate::halo2;
+use crate::halo2_proofs;
 use crate::integer::rns::{Integer, Rns};
 use crate::integer::{IntegerChip, IntegerInstructions, Range, UnassignedInteger};
 use crate::maingate;
-use halo2::arithmetic::CurveAffine;
-use halo2::circuit::{Layouter, Value};
-use halo2::halo2curves::ff::PrimeField;
-use halo2::plonk::Error;
+use halo2_proofs::arithmetic::CurveAffine;
+use halo2_proofs::circuit::{Layouter, Value};
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
 use integer::maingate::RegionCtx;
 use maingate::{AssignedCondition, MainGate};
 use std::collections::BTreeMap;
@@ -396,8 +396,8 @@ mod tests {
     use std::rc::Rc;
 
     use super::{AssignedPoint, EccConfig, GeneralEccChip, Point};
-    use crate::halo2;
-    use crate::halo2::halo2curves::{
+    use crate::halo2_proofs;
+    use crate::halo2_proofs::halo2curves::{
         ff::{Field, FromUniformBytes, PrimeField},
         group::{prime::PrimeCurveAffine, Curve as _, Group},
     };
@@ -405,9 +405,9 @@ mod tests {
     use crate::integer::NUMBER_OF_LOOKUP_LIMBS;
     use crate::integer::{AssignedInteger, IntegerInstructions};
     use crate::maingate;
-    use halo2::arithmetic::CurveAffine;
-    use halo2::circuit::{Layouter, SimpleFloorPlanner, Value};
-    use halo2::plonk::{Circuit, ConstraintSystem, Error};
+    use halo2_proofs::arithmetic::CurveAffine;
+    use halo2_proofs::circuit::{Layouter, SimpleFloorPlanner, Value};
+    use halo2_proofs::plonk::{Circuit, ConstraintSystem, Error};
     use integer::rns::Integer;
     use integer::Range;
     use maingate::mock_prover_verify;

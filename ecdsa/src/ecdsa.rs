@@ -1,12 +1,12 @@
 use super::integer::{IntegerChip, IntegerConfig};
-use crate::halo2;
+use crate::halo2_proofs;
 use crate::integer;
 use crate::maingate;
 use ecc::maingate::RegionCtx;
 use ecc::{AssignedPoint, EccConfig, GeneralEccChip};
-use halo2::arithmetic::CurveAffine;
-use halo2::halo2curves::ff::PrimeField;
-use halo2::{circuit::Value, plonk::Error};
+use halo2_proofs::arithmetic::CurveAffine;
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::{circuit::Value, plonk::Error};
 use integer::rns::Integer;
 use integer::{AssignedInteger, IntegerInstructions};
 use maingate::{MainGateConfig, RangeConfig};
@@ -140,7 +140,7 @@ impl<E: CurveAffine, N: PrimeField, const NUMBER_OF_LIMBS: usize, const BIT_LEN_
 #[cfg(test)]
 mod tests {
     use super::{AssignedEcdsaSig, AssignedPublicKey, EcdsaChip};
-    use crate::halo2;
+    use crate::halo2_proofs;
     use crate::integer;
     use crate::maingate;
     use ecc::integer::Range;
@@ -148,13 +148,13 @@ mod tests {
     use ecc::maingate::fe_to_big;
     use ecc::maingate::RegionCtx;
     use ecc::{EccConfig, GeneralEccChip};
-    use halo2::arithmetic::CurveAffine;
-    use halo2::circuit::{Layouter, SimpleFloorPlanner, Value};
-    use halo2::halo2curves::{
+    use halo2_proofs::arithmetic::CurveAffine;
+    use halo2_proofs::circuit::{Layouter, SimpleFloorPlanner, Value};
+    use halo2_proofs::halo2curves::{
         ff::{Field, FromUniformBytes, PrimeField},
         group::{Curve, Group},
     };
-    use halo2::plonk::{Circuit, ConstraintSystem, Error};
+    use halo2_proofs::plonk::{Circuit, ConstraintSystem, Error};
     use integer::IntegerInstructions;
     use maingate::mock_prover_verify;
     use maingate::{MainGate, MainGateConfig, RangeChip, RangeConfig, RangeInstructions};

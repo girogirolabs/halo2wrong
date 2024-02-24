@@ -3,7 +3,7 @@
 //! for optimisation purposes.
 
 use crate::{
-    halo2::{
+    halo2_proofs::{
         arithmetic::Field,
         circuit::{Chip, Layouter, Value},
         plonk::Error,

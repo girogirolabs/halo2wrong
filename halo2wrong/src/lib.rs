@@ -1,12 +1,12 @@
-use halo2::{
+use halo2_proofs::{
     arithmetic::Field,
     circuit::{AssignedCell, Cell, Region, Value},
     plonk::{Advice, Column, Error, Fixed, Selector},
 };
 
 pub mod utils;
-pub use halo2;
-pub use halo2::halo2curves as curves;
+pub use halo2_proofs;
+pub use halo2_proofs::halo2curves as curves;
 
 #[derive(Debug)]
 pub struct RegionCtx<'a, F: Field> {

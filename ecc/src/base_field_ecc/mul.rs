@@ -1,9 +1,9 @@
 use super::{AssignedPoint, BaseFieldEccChip};
 use crate::maingate::{AssignedCondition, AssignedValue, MainGateInstructions};
-use crate::{halo2, Selector, Table, Windowed};
-use halo2::arithmetic::CurveAffine;
-use halo2::halo2curves::ff::{Field, PrimeField};
-use halo2::plonk::Error;
+use crate::{halo2_proofs, Selector, Table, Windowed};
+use halo2_proofs::arithmetic::CurveAffine;
+use halo2_proofs::halo2curves::ff::{Field, PrimeField};
+use halo2_proofs::plonk::Error;
 use integer::maingate::RegionCtx;
 
 impl<C: CurveAffine, const NUMBER_OF_LIMBS: usize, const BIT_LEN_LIMB: usize>

@@ -1,9 +1,9 @@
 use super::{IntegerChip, Range};
 use crate::rns::{Common, Integer};
 use crate::{AssignedInteger, AssignedLimb, UnassignedInteger};
-use halo2::halo2curves::ff::PrimeField;
-use halo2::plonk::Error;
-use maingate::{fe_to_big, halo2, MainGateInstructions, RangeInstructions, RegionCtx, Term};
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
+use maingate::{fe_to_big, halo2_proofs, MainGateInstructions, RangeInstructions, RegionCtx, Term};
 use num_bigint::BigUint as big_uint;
 use num_traits::One;
 use std::rc::Rc;

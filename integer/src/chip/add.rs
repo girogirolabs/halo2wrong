@@ -1,8 +1,8 @@
 use crate::chip::IntegerChip;
 use crate::rns::Integer;
 use crate::{AssignedInteger, AssignedLimb, Common, PrimeField};
-use halo2::plonk::Error;
-use maingate::{fe_to_big, halo2, MainGateInstructions, RegionCtx, Term};
+use halo2_proofs::plonk::Error;
+use maingate::{fe_to_big, halo2_proofs, MainGateInstructions, RegionCtx, Term};
 use num_bigint::BigUint as big_uint;
 use std::rc::Rc;
 

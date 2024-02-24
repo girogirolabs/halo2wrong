@@ -5,7 +5,7 @@
 #![deny(missing_docs)]
 
 use crate::rns::{Common, Integer, Limb};
-use halo2::{circuit::Value, halo2curves::ff::PrimeField};
+use halo2_proofs::{circuit::Value, halo2curves::ff::PrimeField};
 use maingate::{big_to_fe, compose, fe_to_big, AssignedValue};
 use num_bigint::BigUint as big_uint;
 use rns::Rns;
@@ -14,10 +14,10 @@ use std::rc::Rc;
 pub use chip::{IntegerChip, IntegerConfig};
 pub use instructions::{IntegerInstructions, Range};
 pub use maingate;
-pub use maingate::halo2;
+pub use maingate::halo2_proofs;
 
 #[cfg(test)]
-use halo2::halo2curves as curves;
+use halo2_proofs::halo2curves as curves;
 
 /// Chip for integer constaints
 pub mod chip;

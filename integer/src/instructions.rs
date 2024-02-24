@@ -1,8 +1,8 @@
 use super::{AssignedInteger, UnassignedInteger};
-use crate::maingate::{halo2, AssignedCondition, RegionCtx};
+use crate::maingate::{halo2_proofs, AssignedCondition, RegionCtx};
 use crate::rns::Integer;
-use halo2::plonk::Error;
-use maingate::halo2::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
+use maingate::halo2_proofs::halo2curves::ff::PrimeField;
 
 /// Signals the range mode that should be applied while assigning a new
 /// [`Integer`]

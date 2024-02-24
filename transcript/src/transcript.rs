@@ -1,10 +1,10 @@
 use crate::{
-    halo2::{arithmetic::CurveAffine, halo2curves::ff::PrimeField, plonk::Error},
+    halo2_proofs::{arithmetic::CurveAffine, halo2curves::ff::PrimeField, plonk::Error},
     hasher::HasherChip,
     maingate::{AssignedValue, RegionCtx},
 };
 use ecc::{
-    halo2::circuit::Chip,
+    halo2_proofs::circuit::Chip,
     maingate::{big_to_fe, decompose, fe_to_big},
     AssignedPoint, BaseFieldEccChip,
 };
@@ -162,19 +162,19 @@ impl<
 
 #[cfg(test)]
 mod tests {
-    use crate::halo2::circuit::Layouter;
-    use crate::halo2::circuit::SimpleFloorPlanner;
-    use crate::halo2::halo2curves::ff::{Field, PrimeField};
-    use crate::halo2::plonk::Error;
-    use crate::halo2::plonk::{Circuit, ConstraintSystem};
+    use crate::halo2_proofs::circuit::Layouter;
+    use crate::halo2_proofs::circuit::SimpleFloorPlanner;
+    use crate::halo2_proofs::halo2curves::ff::{Field, PrimeField};
+    use crate::halo2_proofs::plonk::Error;
+    use crate::halo2_proofs::plonk::{Circuit, ConstraintSystem};
     use crate::maingate::mock_prover_verify;
     use crate::maingate::MainGate;
     use crate::maingate::MainGateConfig;
     use crate::maingate::{MainGateInstructions, RegionCtx};
     use crate::transcript::LimbRepresentation;
     use crate::TranscriptChip;
-    use ecc::halo2::arithmetic::CurveAffine;
-    use ecc::halo2::circuit::Value;
+    use ecc::halo2_proofs::arithmetic::CurveAffine;
+    use ecc::halo2_proofs::circuit::Value;
     use ecc::integer::rns::Rns;
     use ecc::maingate::RangeChip;
     use ecc::maingate::RangeConfig;

@@ -5,14 +5,14 @@
 #![deny(missing_debug_implementations)]
 #![deny(missing_docs)]
 
-use halo2wrong::halo2::circuit::AssignedCell;
+use halo2wrong::halo2_proofs::circuit::AssignedCell;
 
 #[macro_use]
 mod instructions;
 mod main_gate;
 mod range;
 
-pub use halo2wrong::{halo2, utils::*, RegionCtx};
+pub use halo2wrong::{halo2_proofs, utils::*, RegionCtx};
 pub use instructions::{CombinationOptionCommon, MainGateInstructions, Term};
 pub use main_gate::*;
 pub use range::*;

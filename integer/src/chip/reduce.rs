@@ -1,8 +1,8 @@
 use super::{IntegerChip, IntegerInstructions, Range};
 use crate::rns::MaybeReduced;
 use crate::{AssignedInteger, PrimeField};
-use halo2::plonk::Error;
-use maingate::{halo2, AssignedValue, MainGateInstructions, RangeInstructions, RegionCtx, Term};
+use halo2_proofs::plonk::Error;
+use maingate::{halo2_proofs, AssignedValue, MainGateInstructions, RangeInstructions, RegionCtx, Term};
 
 impl<W: PrimeField, N: PrimeField, const NUMBER_OF_LIMBS: usize, const BIT_LEN_LIMB: usize>
     IntegerChip<W, N, NUMBER_OF_LIMBS, BIT_LEN_LIMB>

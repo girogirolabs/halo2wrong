@@ -1,8 +1,8 @@
 use super::{IntegerChip, IntegerInstructions, Range};
 use crate::{rns::Integer, AssignedInteger, PrimeField};
-use halo2::plonk::Error;
+use halo2_proofs::plonk::Error;
 use maingate::{
-    halo2, AssignedCondition, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term,
+    halo2_proofs, AssignedCondition, CombinationOptionCommon, MainGateInstructions, RegionCtx, Term,
 };
 use std::rc::Rc;
 

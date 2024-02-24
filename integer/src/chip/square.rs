@@ -1,8 +1,8 @@
 use super::{IntegerChip, IntegerInstructions, Range};
 use crate::{rns::MaybeReduced, AssignedInteger, PrimeField};
-use halo2::{arithmetic::Field, plonk::Error};
+use halo2_proofs::{arithmetic::Field, plonk::Error};
 use maingate::{
-    halo2, AssignedValue, CombinationOptionCommon, MainGateInstructions, RangeInstructions,
+    halo2_proofs, AssignedValue, CombinationOptionCommon, MainGateInstructions, RangeInstructions,
     RegionCtx, Term,
 };
 

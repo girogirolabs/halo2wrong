@@ -1,10 +1,10 @@
 use super::{AssignedPoint, GeneralEccChip};
 use crate::integer::{AssignedInteger, IntegerInstructions};
 use crate::maingate::{AssignedCondition, MainGateInstructions};
-use crate::{halo2, Selector, Table, Windowed};
-use halo2::arithmetic::CurveAffine;
-use halo2::halo2curves::ff::PrimeField;
-use halo2::plonk::Error;
+use crate::{halo2_proofs, Selector, Table, Windowed};
+use halo2_proofs::arithmetic::CurveAffine;
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
 use integer::maingate::RegionCtx;
 
 impl<

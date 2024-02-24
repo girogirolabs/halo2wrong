@@ -1,5 +1,5 @@
 use crate::{
-    halo2::{halo2curves::ff::PrimeField, plonk::Error},
+    halo2_proofs::{halo2curves::ff::PrimeField, plonk::Error},
     maingate::{AssignedValue, MainGate, MainGateConfig, MainGateInstructions, RegionCtx, Term},
 };
 use poseidon::{SparseMDSMatrix, Spec, State};

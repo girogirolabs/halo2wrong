@@ -1,9 +1,9 @@
 use super::AssignedPoint;
 use super::GeneralEccChip;
-use crate::halo2;
-use halo2::arithmetic::CurveAffine;
-use halo2::halo2curves::ff::PrimeField;
-use halo2::plonk::Error;
+use crate::halo2_proofs;
+use halo2_proofs::arithmetic::CurveAffine;
+use halo2_proofs::halo2curves::ff::PrimeField;
+use halo2_proofs::plonk::Error;
 use integer::maingate::RegionCtx;
 use integer::IntegerInstructions;
 
